@@ -13,17 +13,43 @@ button {
     height: 50px;
     border-radius: 5px;
     margin: 2px;
+    background-color: white;
+    opacity: .75;
 }
+button:hover {
+    background-color: white;
+    opacity: .95;
+}
+.ac, .back, .multiply, .minus, .add, .equal {
+    background-color: salmon;
+}
+
 .display {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    font-family: sans-serif;
     border: 1px solid black;
     background-color: white;
+    padding: 9px;
     border-radius: 5px;
-    display: flex;
-    flex-direction: row;
     height : 56px;
-    width: 310px;
+    width: 294px;
     margin-bottom: 12px;
-
+    opacity: .50;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.display .previous-operand {
+    color: black;
+    opactiy: .75;
+    font-size: 1rem;
+}
+.display .current-operand {
+    color: black;
+    font-size: 1.8rem;
 }
 .calculator-outline {
     border: 1px solid black;
@@ -50,6 +76,7 @@ button {
 .footer {
     position: absolute;
     bottom: 0;
-    left: 43%;
+    left: 42%;
     margin-bottom: 10px;
+    font-family: sans-serif;
 }
